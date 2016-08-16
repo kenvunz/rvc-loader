@@ -69,6 +69,7 @@ var Component = require('rvc!./mycomponent.html');
 #### loaders
 
 - type: `Object`
+
 An object specifying Webpack loaders to use for language blocks inside *.html files.
 
 For example, using `scss-loader` to process the `style` block
@@ -84,3 +85,7 @@ module.exports = {
   ...
 };
 ```
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
