@@ -63,3 +63,24 @@ your `require()` call via a prefix:
 ```js
 var Component = require('rvc!./mycomponent.html');
 ```
+
+## Webpack Options Reference
+
+#### loaders
+
+- type: `Object`
+An object specifying Webpack loaders to use for language blocks inside *.html files.
+
+For example, using `scss-loader` to process the `style` block
+```js
+/* webpack.config.js */
+module.exports = {
+    ractive: {
+        loaders: {
+            css: "css!scss",
+            js: "babel"
+        }
+    }
+  ...
+};
+```

@@ -69,6 +69,17 @@ describe('ractive-loader', function() {
         });
     }
 
+    it('bare', function(done) {
+        test({
+            entry: './test/fixtures/bare.html'
+        }, function(window) {
+            var instance = new window.RactiveComponent();
+            var html = instance.toHTML();
+            expect(html).to.equal('<h1>Hello</h1>');
+            done();
+        });
+    });
+
     it('basic', function(done) {
         test({
             entry: './test/fixtures/basic.html'
@@ -78,6 +89,21 @@ describe('ractive-loader', function() {
             expect(html).to.equal('<h2 class="red">Hello from Component A!</h2> <img src="./nope.jpg"> <p>Part</p>');
             expect(instance.get('msg')).to.be.not.null;
             expect(instance.foo()).to.equal('baz');
+            done();
+        });
+    });
+
+    it('with scss', function(done) {
+        test({
+            entry: './test/fixtures/with-scss.html',
+
+            ractive: {
+                loaders: {
+                    css: 'css-loader!sass-loader'
+                }
+            }
+        }, function(window) {
+            expect(window.RactiveComponent.__definition.css).to.equal('.red {\n  color: #f00; }\n');
             done();
         });
     });

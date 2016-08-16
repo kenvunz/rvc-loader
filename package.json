@@ -32,7 +32,9 @@
     "chai": "^3.5.0",
     "expose-loader": "^0.7.1",
     "jsdom": "^9.4.2",
+    "node-sass": "^3.8.0",
     "rimraf": "^2.5.4",
+    "sass-loader": "^4.0.0",
     "tosource": "^1.0.0",
     "webpack": "^1.13.1"
   },
