@@ -5,7 +5,7 @@ var fs = require('fs'),
     expect = require('chai').expect,
     rimraf = require('rimraf');
 
-describe('ractive-loader', function() {
+describe('rvc-loader', function() {
     var html = '<!DOCTYPE html><html><head></head><body></body></html>',
         output = path.resolve(__dirname, './output'),
         loader = 'expose?RactiveComponent!'+path.resolve(__dirname, '../'),
