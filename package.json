@@ -1,0 +1,29 @@
+{
+  "name": "rvc-loader",
+  "version": "0.7.0",
+  "description": "Ractive.js component loader for Webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenvunz/rvc-loader.git"
+  },
+  "keywords": [
+    "ractive",
+    "rvc",
+    "webpack",
+    "loader"
+  ],
+  "author": "Ken Vu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kenvunz/rvc-loader/issues"
+  },
+  "homepage": "https://github.com/kenvunz/rvc-loader#readme",
+  "dependencies": {
+    "ractive": "^0.7.x",
+    "rcu": "^0.8.2"
+  }
+}
