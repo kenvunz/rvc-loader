@@ -6,6 +6,8 @@
 - ES2015 (aka ES6) enabled by default via `<script>` tags. All scripts inside Ractive components
 are compiled with [Babel](https://babeljs.io/) using `babel-loader`
 
+- Allow custom loaders for `<script>` and `<style>` blocks
+
 ## Usage
 
 [Documentation: using loaders](http://webpack.github.io/docs/using-loaders.html)
@@ -78,8 +80,7 @@ For example, using `scss-loader` to process the `style` block
 module.exports = {
     ractive: {
         loaders: {
-            css: "css!scss",
-            js: "babel"
+            css: "css!scss"
         }
     }
   ...
