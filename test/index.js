@@ -17,6 +17,12 @@ describe('ractive-loader', function() {
             module: {
                 loaders: [
                     {
+                        test: /\.js$/,
+                        loader: 'babel?presets[]=es2015&plugins[]=transform-runtime&comments=false',
+                        exclude: /node_modules/
+                    },
+
+                    {
                         test: /\.html$/,
                         loader: loader
                     }
@@ -71,6 +77,7 @@ describe('ractive-loader', function() {
             var html = instance.toHTML();
             expect(html).to.equal('<h2 class="red">Hello from Component A!</h2> <img src="./nope.jpg"> <p>Part</p>');
             expect(instance.get('msg')).to.be.not.null;
+            expect(instance.foo()).to.equal('baz');
             done();
         });
     });
