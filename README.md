@@ -87,6 +87,24 @@ module.exports = {
 };
 ```
 
+## Webpack Loader Query
+
+#### raw
+- type: `Boolean`
+
+A flag indicate that loader should export the component in `raw` form, e.g don't call `Ractive.extend` internally
+
+```js
+import RawView from "rvc?raw!view.html";
+import View2 from "rvc!view.html"
+
+let View1 = Ractive.extend(RawView);
+let view1 = new View1();
+let view2 = new View2();
+
+view1.toHTML() === view2.toHTML(); // true
+```
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
