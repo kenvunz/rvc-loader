@@ -122,4 +122,16 @@ describe('rvc-loader', function() {
             done();
         });
     });
+
+    it('allow predefined components attribute', function(done) {
+        test({
+            entry: './test/fixtures/components.html'
+        }, function(window) {
+            var instance = new window.RactiveComponent();
+            var html = instance.toHTML();
+            expect(html).to.equal('<h2 class="red">Hello from Component A!</h2> <img src="./nope.jpg"> <p>Part</p> <p>Another</p>');
+
+            done();
+        });
+    });
 });
