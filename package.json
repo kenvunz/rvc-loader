@@ -25,7 +25,7 @@
   "dependencies": {
     "loader-utils": "^0.2.15",
     "object-assign": "^4.1.0",
-    "rcu": "^0.8.2",
+    "rcu": "^0.9.0",
     "tosource": "^1.0.0"
   },
   "devDependencies": {
@@ -33,7 +33,6 @@
     "expose-loader": "^0.7.1",
     "jsdom": "^9.4.2",
     "node-sass": "^3.8.0",
-    "rcu": "^0.9.0",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.0",
     "webpack": "^1.13.1"
